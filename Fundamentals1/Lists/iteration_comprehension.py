@@ -76,18 +76,50 @@ for num in [1, 2, 3, 4, 5, 6, 7]:
 # 3
 # 5
 # the loop continues before the print statement if num is even,
-# and it ends entirely when num is 6, so the last odd number doesn't get printed.   
+# and it ends entirely when num is 6, so the last odd number doesn't get printed.
 
 
 
+# range
 
+# In Python we can also create ranges, which represent a range of numbers,
+# with the following syntax: range(start,stop,step). Note that the range
+# is not inclusive. In other words, range(1,4) will include 1, 2, and 3,
+# but not 4!
 
+# We can do some pretty cool things with range
 
+(a,b,c,d) = range(4)
+a # 0
+b # 1
+c # 2
+d # 3
 
+(a,b,c,d) = range(0, 8, 2)
+a # 0
+b # 2
+c # 4
+d # 6
 
+for num in range(4,10):
+    print(num)
 
+# 4
+# 5
+# 6
+# 7
+# 8
+# 9
 
+# Note that the chr functions takes in a number
+# and returns the ascii character for the number
+capital_letters = []
+for num in range(65, 91):
+    capital_letters.append(chr(num))
 
-
+capital_letters
+# Output:['A','B','C','D','E','F','G','H','I','J',
+#   'K','L','M','N','O','P','Q','R',
+#   'S','T','U','V','W','X','Y','Z']
 
 #
