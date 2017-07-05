@@ -170,3 +170,11 @@ len([word for word in "the quick brown fox jumps over the lazy dog".split(" ") i
     # for each word in the string "the quick brown fox jumps over the lazy dog" split(" ") into an array
         # if the length of each word is 3
 #
+
+
+# For longer list comprehensions, we can also split it into multiple lines for readability
+len([
+    word
+    for word in "the quick brown fox jumps over the lazy dog".split(" ")
+    if len(word) == 3
+])
