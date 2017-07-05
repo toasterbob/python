@@ -61,5 +61,33 @@ while i < 5:
 # 3
 # 4
 
+# If you ever want to move to the next step of the iteration, you can
+# prematurely break out of the current iteration with the the continue
+# keyword. Similarly, you can exit from a loop entirely using the break keyword.
+
+for num in [1, 2, 3, 4, 5, 6, 7]:
+    if num % 2 == 0:
+        continue
+    elif num > 5:
+        break
+    print(num)
+
+# 1
+# 3
+# 5
+# the loop continues before the print statement if num is even,
+# and it ends entirely when num is 6, so the last odd number doesn't get printed.   
+
+
+
+
+
+
+
+
+
+
+
+
 
 #
