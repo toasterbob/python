@@ -147,8 +147,26 @@ capital_letters
 #   'S','T','U','V','W','X','Y', 'Z']
 
 
+# We can also put if statements inside of our list comprehensions to
+# filter out certain transformed values!
+# option 1 without list comprehension
+vowels = []
+for letter in 'awesome':
+    if letter in ['a','e','i','o','u']:
+        vowels.append(letter)
+
+print(vowels) # ['a', 'e', 'o', 'e']
+
+# option 2 with list comprehension
+# In this example, the first letter is the value that we want in the new list
+# and the if portion is the filter step
+vowels = [letter for letter in "awesome" if letter in ["a", "e", "i", "o", "u"]]
+print(vowels) # ['a', 'e', 'o', 'e']
 
 
-
-
+# Count of 3 letter words in a string
+len([word for word in "the quick brown fox jumps over the lazy dog".split(" ") if len(word) == 3 #4
+# figure out the length
+    # for each word in the string "the quick brown fox jumps over the lazy dog" split(" ") into an array
+        # if the length of each word is 3
 #
