@@ -122,4 +122,33 @@ capital_letters
 #   'K','L','M','N','O','P','Q','R',
 #   'S','T','U','V','W','X','Y','Z']
 
+
+
+# Ranges take up less memory than lists, so if you find yourself needing a
+# bunch of numbers that increment by the same amount each time, try to use
+# a range instead of a list.
+
+# List Comprehension
+
+# List comprehensions are one of the most powerful tools in Python. They
+# allow you to build lists in a more concise way, often in a single line.
+# List comprehensions are a wonderful alternative to loops!
+
+# One way to use a list comprehension is to transform a set of values from
+# a range or another list into some new set of values. This is sometimes
+# referred to as a mapping opration.
+
+# return a list of squares
+[num**2 for num in range(10)] # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+[chr(num) for num in range(65, 91)]
+# Output:['A','B','C','D','E','F','G','H','I','J',
+#   'K','L','M','N','O','P','Q','R',
+#   'S','T','U','V','W','X','Y', 'Z']
+
+
+
+
+
+
 #
