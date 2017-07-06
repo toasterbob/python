@@ -94,10 +94,22 @@ l.pop() # IndexError - Notice that pop throws an error if you call it on an empt
 
 # In Ruby if you add a value to pop, it pops that many items, not the index
 
+# remove - Removes the first occurrence of a value
+l = [1,2,3,1]
+l.remove(1)
+l # [2,3,1]
+l.remove(5) # ValueError - Notice that remove throws an error if you try
+# to remove something not in the list.
 
+# reverse - Reverses a list in place (i.e. it mutates the original list)
+l = [1,2,3,4]
+l.reverse()
+l # [4,3,2,1]
 
-
-
+# sort - Sorts the list in place (i.e. it mutates the original list)
+l = [1,4,3,2]
+l.sort()
+l # [1,2,3,4]
 
 
 
