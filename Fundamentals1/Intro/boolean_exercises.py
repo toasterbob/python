@@ -55,3 +55,6 @@ else:
     print("You picked 0!")
 
 #16
+"apple".find("l")
+
+#17
