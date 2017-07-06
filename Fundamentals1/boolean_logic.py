@@ -90,15 +90,34 @@ bool({})
 # Empty set
 bool(set())
 
+# Comparison: is versus ==
+# Everything in Python is an object with an id.
+# To see if two objects have the same id, you can use the is operator.
+# You can also inspect an object's id directly using the id function.
 
+# is operator (compares id)
+a = 1
+b = a
+b is a # True
+b = 2
+a is b # False
+id(a) # should give you a number
 
+# If you just want to check whether two objects have the same value, you
+# can use the == comparator. In general, it's probably best to use == for
+# comparison, unless you know that you're trying to determine whether
+# two objects have the same id
+# (i.e. they are the same object in memory).
 
+list1 = [1, 2]
+list2 = [1, 2]
+list3 = list1
 
+list1 is list3 # True
+list1 is list2 # False
 
-
-
-
-
+list1 == list3 # True
+list1 == list2 # True
 
 
 
