@@ -21,3 +21,20 @@ True and False
 len("What's my length?") # 17
 
 #8
+"i am shouting".upper()
+
+#9
+int("1000
+
+#10
+"{}real".format(4)
+#theirs
+str(4) + "real"
+
+#11
+x = 3 * "cool" # "coolcoolcool"
+
+#12
+# 1 / 0 # ZeroDivisionError: division by zero
+
+#13
