@@ -38,3 +38,6 @@ print("Hello World!.")
 #Dictionaries: An unordered key-value pair system.  For example, a dictionary
 #              is similar to a hash in Ruby, or an object in JavaScript.
 #              Here's an example of a dictionary: {"key": "value", "a": 0}.
+
+
+# To run the file, make sure you are in the Terminal/Command Line and run python3 first.py.
