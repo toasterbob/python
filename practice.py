@@ -29,6 +29,6 @@ print("Hello World!.")
 
 # DATA TYPES IN PYTHON
 # Booleans: True and False (capitalize!)
-# Numbers
-# Strings
-# Lists
+# Numbers: integers and floats
+# Strings: sequences of Unicode characters, like "hi", "bye", and "I love strings!"
+# Lists: very similar to an array
