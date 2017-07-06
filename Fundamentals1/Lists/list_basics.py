@@ -24,6 +24,32 @@ my_list[2] = False
 my_list # ["a", 1, False]
 
 
+# LIST METHODS
+
+# append - Adds a value to the end of a list
+my_list = [1,2,3]
+my_list.append(10)
+my_list # [1,2,3,10]
+
+# clear - Removes all the values in a list:
+l = [1,2,3]
+l.clear()
+l # []
+
+# copy - Makes a copy of a list (like dup in Ruby)
+l = []
+l.append(2)
+l.append(3)
+l.append(4)
+l # [2, 3, 4]
+z = l.copy()
+z # [2, 3, 4]
+l # [2, 3, 4]
+z.remove(3)
+z # [2, 4]
+l # [2, 3, 4]
+
+
 
 
 
