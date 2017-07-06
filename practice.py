@@ -23,7 +23,7 @@ Namespaces are one honking great idea -- let's do more of those!"
 print("Hello World!.")
 
 # python3 #to type in command line repl
-# quit() # to exit
+# quit() # to exit #  or press control + d.
 
 # https://www.python.org/dev/peps/pep-0008/ #PEP 8 style guide
 
