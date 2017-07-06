@@ -70,4 +70,41 @@ l.extend([5,6,7])
 l # [1,2,3,4,5,6,7]
 
 
+# index - Returns the index at which a value is found. If the value is
+# not found, index returns a ValueError:
+
+l = [4, 8, 6, 4]
+l.index(8) # 1
+l.index(4) # 0 - it only finds the index of the first matching element
+l.index(12) # ValueError
+
+# insert - Takes in an index and a value, and inserts the value at the given index
+l = [4,6,8]
+l.insert(2, 'awesome')
+l # [4,6,'awesome',8]
+
+# pop - By default, pop removes the last element from a list. If pop is
+# given an index as an argument, the element at that index is removed.
+# This method returns the element removed
+l = [3,4]
+l.pop(0) # 3
+l
+l.pop() # 4
+l.pop() # IndexError - Notice that pop throws an error if you call it on an empty list!
+
+# In Ruby if you add a value to pop, it pops that many items, not the index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #
