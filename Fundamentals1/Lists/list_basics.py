@@ -129,9 +129,13 @@ first_list[0:1] # [1]
 # if a value for end isn't provided, you'll slice to the end of the list
 first_list[1:] # [2, 3, 4, 5, 6]
 
+# if a value for start isn't provided, you'll slice from the start of the list
+first_list[:3] # [1,2,3]
 
+# get the last element in the list
+first_list[-1] # 6
 
-
-
+# start from the second to last element in the list
+first_list[-2:] # [5, 6]
 
 #
