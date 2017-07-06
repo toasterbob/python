@@ -120,5 +120,17 @@ list1 == list3 # True
 list1 == list2 # True
 
 
+# Gathering user input
+# It is very common in command line programs to prompt the user for
+# information. In Python, this function is called input.
 
+name = input("What is your name? ")
+# you can now type anything and it will be saved into the name variable
+#What is your name? Mark
+name # 'Mark'
 #
+
+# pass
+# Since Python is very sensitive to indentation, there may be situations
+# where you need to place indented code, but do not want to run anything.
+# In this case, the pass keyword must be used.
