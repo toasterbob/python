@@ -24,7 +24,7 @@ len("What's my length?") # 17
 "i am shouting".upper()
 
 #9
-int("1000
+int("1000")
 
 #10
 "{}real".format(4)
@@ -38,3 +38,20 @@ x = 3 * "cool" # "coolcoolcool"
 # 1 / 0 # ZeroDivisionError: division by zero
 
 #13
+type([]) # <class 'list'>
+
+#14
+name = input("What is your name? ")
+
+#15
+# number = float(input("Please give me a number"))
+number = input("Please give me a number: ")
+number = float(number)
+if number > 0:
+    print("That number is greater than 0!")
+elif number < 0:
+    print("That number is less than 0!")
+else:
+    print("You picked 0!")
+
+#16
