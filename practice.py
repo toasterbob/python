@@ -26,3 +26,9 @@ print("Hello World!.")
 # quit() # to exit
 
 # https://www.python.org/dev/peps/pep-0008/ #PEP 8 style guide
+
+# DATA TYPES IN PYTHON
+# Booleans: True and False (capitalize!)
+# Numbers
+# Strings
+# Lists
