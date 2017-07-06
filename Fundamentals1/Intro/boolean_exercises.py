@@ -12,3 +12,12 @@ if 1 < 2 < 4:
     print("Math is fun")
 
 #5
+nope = None
+
+#6
+True and False
+
+#7
+len("What's my length?") # 17
+
+#8
