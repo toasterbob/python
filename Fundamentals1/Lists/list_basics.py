@@ -112,7 +112,22 @@ l.sort()
 l # [1,2,3,4]
 
 
+# Slicing Lists
+# Slices return portions of a list or string.
 
+# Slices return portions of a list or string. While this seems like a
+# pretty minor concept, there's actually quite a bit you can do with
+# slices that you might not expect.
+
+# The standard syntax for a slice is list[start:end], or list[start:end:step]
+# We can also do list[:] to make a copy of a list,
+# or even list[::-1] to make a copy of a reversed list.
+
+first_list = [1,2,3,4,5,6]
+first_list[0:1] # [1]
+
+# if a value for end isn't provided, you'll slice to the end of the list
+first_list[1:] # [2, 3, 4, 5, 6]
 
 
 
