@@ -58,3 +58,23 @@ print("Bye!")
 # name = "Matt"
 # if name == "Matt":
 # print("Your name is Matt") # IndentationError!
+
+
+# Falsey Values in Python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
