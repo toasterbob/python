@@ -138,4 +138,11 @@ first_list[-1] # 6
 # start from the second to last element in the list
 first_list[-2:] # [5, 6]
 
+# There is always more than one way of doing something...
+first_list[4:] == first_list[-2:] # True
+
+# step in the opposite direction
+first_list[::-1] # [6, 5, 4, 3, 2, 1]
+first_list[::2] # [1, 3, 5]
+first_list[::-2] # [6, 4, 2]
 #
