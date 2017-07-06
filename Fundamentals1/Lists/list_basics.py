@@ -50,11 +50,24 @@ z # [2, 4]
 l # [2, 3, 4]
 
 
+# count - Counts how many times an item appears in a list
+l = [1,2,3,4,5,5,5,5]
+l.count(1) # 1
+l.count(5) # 4
 
+# extend - Appends another list and flattens the appended list
+# (so there is not a list inside of a list):
+l = [1,2,3]
+l.append([4])
+l # [1,2,3,[4]]
 
+l.extend([5,6,7])
+l # [1,2,3,[4],5,6,7]
 
-
-
+l = [1,2,3]
+l.extend([4])
+l.extend([5,6,7])
+l # [1,2,3,4,5,6,7]
 
 
 #
