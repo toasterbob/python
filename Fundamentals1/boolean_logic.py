@@ -61,9 +61,34 @@ print("Bye!")
 
 
 # Falsey Values in Python
+# Python has quite a few falsey values (values that evaluate to False
+# when converted to a boolean). We can check whether a value is falsey
+# by passing it into the bool function! All of the following examples
+# evaluate to false when converted to a boolean.
 
+# False
+bool(False)
 
+# 0
+bool(0)
 
+# None
+bool(None)
+
+# Empty string
+bool("")
+
+# Empty list
+bool([])
+
+# Empty tuple
+bool(())
+
+# Empty dictionary
+bool({})
+
+# Empty set
+bool(set())
 
 
 
