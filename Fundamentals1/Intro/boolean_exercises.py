@@ -58,3 +58,9 @@ else:
 "apple".find("l")
 
 #17
+"y" in "xylophone" # True
+"k" in "xylophone" # False
+
+#18
+my_string = "hi"
+my_string.islower() # True
