@@ -32,3 +32,9 @@ print("Hello World!.")
 # Numbers: integers and floats
 # Strings: sequences of Unicode characters, like "hi", "bye", and "I love strings!"
 # Lists: very similar to an array
+# Tuples: Tuples are lists with immutable values - uses parentheses (4, 2, 1)
+# Set: List with only unique values and no indexes - no order of elements within
+#      set("a", "b", "c").
+#Dictionaries: An unordered key-value pair system.  For example, a dictionary
+#              is similar to a hash in Ruby, or an object in JavaScript.
+#              Here's an example of a dictionary: {"key": "value", "a": 0}.
