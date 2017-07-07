@@ -125,3 +125,10 @@ string.find('Tim') # -1
 string.isalpha() # False
 string[0].isalpha() # True
 instructor.isalpha() # True
+
+# isspace
+# To see if a character or all characters are empty spaces, we can use the isspace function
+string.isspace() # False
+string[0].isspace() # False
+string[4].isspace() # True
+"   ".isspace() # True
