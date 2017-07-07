@@ -15,4 +15,15 @@ dict(zip(a,b))
 {char: 0 for char in ["a", "e", "i", "o", "u"]}
 
 #4
-{i: chr(i + 64) for i in range(1, 27)}
+{ i: chr(i + 64) for i in range(1, 27) }
+
+#bonus
+
+{ char: "awesome sauce".count(char) for char in ["a", "e", "i", "o", "u"] }
+# {'a': 2, 'e': 3, 'i': 0, 'o': 1, 'u': 1}
+
+
+#theirs - but I think it counts each value multiple times
+string = "awesome sauce"
+
+{vowel: string.count(vowel) for vowel in "awesome sauce" if vowel in ["a","e","i","o","u"]}
