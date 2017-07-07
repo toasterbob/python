@@ -132,3 +132,11 @@ string.isspace() # False
 string[0].isspace() # False
 string[4].isspace() # True
 "   ".isspace() # True
+
+# islower
+# To see if a character or all characters are lower-cased
+string.islower() # False
+string[0].islower() # True
+string[5].islower() # False
+string.lower().islower() # True
+instructor.islower() # True
