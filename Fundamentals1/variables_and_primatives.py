@@ -140,3 +140,19 @@ string[0].islower() # True
 string[5].islower() # False
 string.lower().islower() # True
 instructor.islower() # True
+
+#isupper
+string.isupper() # False
+"OMG".isupper() # True
+
+# istitle
+# To see if a string is a "title" (first character of each word is capitalized)
+string.istitle() # False
+string.title().istitle() # True
+"not Awesome Sauce".istitle() # False
+"Awesome Sauce".istitle() # True
+
+# endswith
+# To see if a string ends with a certain set of characters
+"string".endswith('g') # True
+"awesome".endswith('foo') # False
