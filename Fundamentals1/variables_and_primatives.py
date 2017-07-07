@@ -162,3 +162,24 @@ string.title().istitle() # True
 string.partition('i') # ('th', 'i', 's Is nIce') #tuple
 "awesome".partition('e') # ('aw', 'e', 'some')
 #similar to split but not as nice
+
+
+
+# Formatting strings with format
+
+# One of the most common string methods you'll use is the format method.
+# This is a powerful method that can do all kinds of string manipulation
+
+# In general this is preferred over string concatenation, which can quickly
+# get cumbersome if you're mixing a lot of variables with strings.
+first_name = "Mark"
+last_name = "Noizumi"
+city = "San Francisco"
+mood = "great"
+
+greeting = "Hi, my name is " + first_name + " " + last_name + ", I live in " + city + " and I feel " + mood + "."
+greeting # 'Hi, my name is Mark Noizumi, I live in San Francisco and I feel great.'
+
+# This is one reason why format is nice. Here's a refactor:
+greeting = "Hi, my name is {} {}, I live in {} and I feel {}.".format(first_name, last_name, city, mood)
+print(greeting)
