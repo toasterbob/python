@@ -118,3 +118,10 @@ instructor.find('e') # 0
 instructor.find('E') # -1 it IS case sensitive!
 string.find("i") # 2, since the character "i" is at index 2
 string.find('Tim') # -1
+
+# isalpha
+# To see if all characters are alphabetic we can use the isalpha function.
+# string = "this Is nIce"
+string.isalpha() # False
+string[0].isalpha() # True
+instructor.isalpha() # True
