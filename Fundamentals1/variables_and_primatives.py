@@ -77,3 +77,24 @@ type(None) # class NoneType
 # To solve this problem, the multi-byte Unicode encodings define a “Byte
 # Order Mark,” which is a special non-printable character that you can
 # include at the beginning of your document to indicate what order your bytes are in.
+
+#UTF-8
+# UTF-8 is a variable-length encoding system for Unicode. That is,
+# different characters take up a different number of bytes. For ascii
+# characters (A-Z, &c.) utf-8 uses just one byte per character. In fact,
+# it uses the exact same bytes; the first 128 characters (0–127) in
+# utf-8 are indistinguishable from ascii.
+# “Extended Latin” characters like ñ and ö end up taking two bytes.
+# Chinese characters like 中 end up taking three bytes.
+# The rarely-used “astral plane” characters take four bytes.
+
+# Disadvantages: because each character can take a different number of
+# bytes, finding the Nth character is an O(N) operation — that is, the
+# longer the string, the longer it takes to find a specific character.
+# Also, there is bit-twiddling involved to encode characters into bytes
+# and decode bytes into characters.
+
+# Advantages: super-efficient encoding of common ascii characters. No
+# worse than UTF-16 for extended Latin characters. Better than UTF-32 for Chinese characters.
+# due to the exact nature of the bit twiddling, there are no byte-ordering issues
+# A document encoded in utf-8 uses the exact same stream of bytes on any computer.
