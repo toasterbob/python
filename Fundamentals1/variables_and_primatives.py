@@ -156,3 +156,9 @@ string.title().istitle() # True
 # To see if a string ends with a certain set of characters
 "string".endswith('g') # True
 "awesome".endswith('foo') # False
+"mark".endswith("ark") # True
+
+# partition
+string.partition('i') # ('th', 'i', 's Is nIce') #tuple
+"awesome".partition('e') # ('aw', 'e', 'some')
+#similar to split but not as nice
