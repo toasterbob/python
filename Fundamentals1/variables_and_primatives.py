@@ -98,3 +98,23 @@ type(None) # class NoneType
 # worse than UTF-16 for extended Latin characters. Better than UTF-32 for Chinese characters.
 # due to the exact nature of the bit twiddling, there are no byte-ordering issues
 # A document encoded in utf-8 uses the exact same stream of bytes on any computer.
+
+a = "hello"
+len(a) # 5
+# A string is like a tuple of characters.
+
+string = "this Is nIce"
+string.upper() # 'THIS IS NICE'
+string.lower() # 'this is nice'
+string.title() # 'This Is Nice'
+
+# Find
+# To find a subset of characters in a string we can use the find method.
+# This will return the index at which the first match occurs. If the
+# character/characters is/are not found, find will return -1
+
+instructor = 'elie'
+instructor.find('e') # 0
+instructor.find('E') # -1 it IS case sensitive!
+string.find("i") # 2, since the character "i" is at index 2
+string.find('Tim') # -1
