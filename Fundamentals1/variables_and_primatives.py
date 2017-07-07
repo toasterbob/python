@@ -183,3 +183,19 @@ greeting # 'Hi, my name is Mark Noizumi, I live in San Francisco and I feel grea
 # This is one reason why format is nice. Here's a refactor:
 greeting = "Hi, my name is {} {}, I live in {} and I feel {}.".format(first_name, last_name, city, mood)
 print(greeting)
+# When we call format on a string, we can pass variables into the string!
+# The variables will be passed in order, wherever format finds a set of curly braces.
+
+# If the empty curly braces seem a little weird, we can also create
+# variable names and assign them to the values we're passing in:
+greeting = "Hi, my name is {first} {last}, I live in {my_city}, and I feel {my_mood}.".format(
+    first=first_name,
+    last=last_name,
+    my_city=city,
+    my_mood=mood
+)
+
+# This approach can be helpful if you want to pass in the same variable
+# multiple times in your string:
+new_greeting = "Hi, my name is {name}. My friends call me {name}. You can call me {name}.".format(name=first_name)
+print(new_greeting) # Hi, my name is Mark. My friends call me Mark. You can call me Mark.
