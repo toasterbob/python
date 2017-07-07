@@ -135,7 +135,13 @@ set1.intersection(set2) # {2,3}
 # symmetric_difference - Returns a new set containing all the elements
 # that are in exactly one of the sets
 
+set1 = {1,2,3}
+set2 = {2,3,4}
+set1.symmetric_difference(set2) # {1,4}
 
+# union - Returns a new set containing all the elements that are in either set
 
-
+set1 = {1,2,3}
+set2 = {2,3,4}
+set1.union(set2) # {1,2,3,4}
 #
