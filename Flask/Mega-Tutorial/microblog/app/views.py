@@ -39,6 +39,28 @@ def login():
                            title='Sign In',
                            form=form)
 
+# The validate_on_submit method does all the form processing work. If
+# you call it when the form is being presented to the user (i.e. before
+# the user got a chance to enter data on it) then it will return False,
+# so in that case you know that you have to render the template.
+
+# When validate_on_submit is called as part of a form submission request,
+# it will gather all the data, run all the validators attached to fields,
+# and if everything is all right it will return True, indicating that the
+# data is valid and can be processed. This is your indication that this
+# data is safe to incorporate into the application.
+
+# If at least one field fails validation then the function will return
+# False and that will cause the form to be rendered back to the user,
+# and this will give the user a chance to correct any mistakes. We will
+# see later how to show an error message when validation fails.
+
+# The flash function is a quick way to show a message on the next page
+# presented to the user. The flashed messages will not appear automatically
+# in our page, our templates need to display the messages in a way that
+# works for the site layout. We will add these messages to the base template,
+# so that all our templates inherit this functionality. 
+
 # This view is actually pretty simple, it just returns a string, to be
 # displayed on the client's web browser. The two route decorators above
 # the function create the mappings from URLs / and /index to this function.
