@@ -9,3 +9,6 @@ print('Current database version: ' + str(v))
 
 # chmod a+x db_downgrade.py
 # ./db_downgrade.py
+
+# This script will downgrade the database one revision. You can run it
+# multiple times to downgrade several revisions.
