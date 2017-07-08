@@ -3,7 +3,7 @@ from flask import Flask
 app = Flask(__name__)
 app.config.from_object('config')
 
-from app import views
+from app import views 
 
 # The script above simply creates the application object (of class Flask)
 # and then imports the views module, which we haven't written yet. Do not
