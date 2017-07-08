@@ -34,3 +34,9 @@ print('Current database version: ' + str(v))
 # database without having a backup, in case something goes wrong. Also
 # never run a migration for the first time on a production database,
 # always make sure the migration works correctly on a development database.
+
+# chmod a+x db_migrate.py
+# ./db_migrate.py
+
+# New migration saved as /Users/marknoizumi/Desktop/Python/Flask/Mega-Tutorial/microblog/db_repository/versions/001_migration.py
+# Current database version: 1
