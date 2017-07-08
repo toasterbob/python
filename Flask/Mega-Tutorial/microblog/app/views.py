@@ -37,7 +37,8 @@ def login():
         return redirect('/index')
     return render_template('login.html',
                            title='Sign In',
-                           form=form)
+                           form=form,
+                           providers=app.config['OPENID_PROVIDERS']) #Here we grab the configuration by looking it up in app.config with its key. 
 
 # The validate_on_submit method does all the form processing work. If
 # you call it when the form is being presented to the user (i.e. before
@@ -59,7 +60,7 @@ def login():
 # presented to the user. The flashed messages will not appear automatically
 # in our page, our templates need to display the messages in a way that
 # works for the site layout. We will add these messages to the base template,
-# so that all our templates inherit this functionality. 
+# so that all our templates inherit this functionality.
 
 # This view is actually pretty simple, it just returns a string, to be
 # displayed on the client's web browser. The two route decorators above
