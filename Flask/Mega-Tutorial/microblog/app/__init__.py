@@ -1,9 +1,11 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config.from_object('config')
+db = SQLAlchemy(app)
 
-from app import views 
+from app import views, models
 
 # The script above simply creates the application object (of class Flask)
 # and then imports the views module, which we haven't written yet. Do not
