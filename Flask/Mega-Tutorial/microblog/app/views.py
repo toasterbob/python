@@ -2,6 +2,17 @@ from flask import render_template, flash, redirect
 from app import app
 from .forms import LoginForm
 
+@lm.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+
+# Note how this function is registered with Flask-Login through the
+# lm.user_loader decorator. Also remember that user ids in Flask-Login
+# are always unicode strings, so a conversion to an integer is necessary
+# before we can send the id to Flask-SQLAlchemy.
+
+
+
 @app.route('/')
 @app.route('/index')
 def index():
@@ -38,7 +49,7 @@ def login():
     return render_template('login.html',
                            title='Sign In',
                            form=form,
-                           providers=app.config['OPENID_PROVIDERS']) #Here we grab the configuration by looking it up in app.config with its key. 
+                           providers=app.config['OPENID_PROVIDERS']) #Here we grab the configuration by looking it up in app.config with its key.
 
 # The validate_on_submit method does all the form processing work. If
 # you call it when the form is being presented to the user (i.e. before
