@@ -31,8 +31,9 @@ def before_request():
 
 @app.route('/')
 @app.route('/index')
+@login_required
 def index():
-    user = {'nickname': 'Mark'} # fake user
+    user = g.user
     posts = [  # fake array of posts
         {
             'author': {'nickname': 'John'},
