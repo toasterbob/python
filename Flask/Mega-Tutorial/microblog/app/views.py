@@ -66,7 +66,7 @@ def login():
         # return redirect('/index')
         session['remember_me'] = form.remember_me.data
         return oid.try_login(form.openid.data, ask_for=['nickname', 'email'])
-    return render_template('login.html',
+    return render_template('login.html', 
                            title='Sign In',
                            form=form,
                            providers=app.config['OPENID_PROVIDERS']) #Here we grab the configuration by looking it up in app.config with its key.
