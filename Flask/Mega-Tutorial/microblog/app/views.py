@@ -157,3 +157,30 @@ def after_login(resp):
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+@app.route('/user/<nickname>')
+@login_required
+def user(nickname):
+    user = User.query.filter_by(nickname=nickname).first()
+    if user == None:
+        flash('User %s not found.' % nickname)
+        return redirect(url_for('index'))
+    posts = [
+        {'author': user, 'body': 'Test post #1'},
+        {'author': user, 'body': 'Test post #2'}
+    ]
+    return render_template('user.html',
+                           user=user,
+                           posts=posts)
+
+# The @app.route decorator that we used to declare this view function
+# looks a little bit different than the previous ones. In this case we
+# have an argument in it, which is indicated as <nickname>. This translates
+# into an argument of the same name added to the view function. When the
+# client requests, say, URL /user/miguel the view function will be invoked
+# with nickname set to 'miguel'.
+
+# Once we have our user, we just send it in the render_template call,
+# along with some fake posts. Note that in the user profile page we will
+# be displaying only posts by this user, so our fake posts have the author
+# field correctly set.
