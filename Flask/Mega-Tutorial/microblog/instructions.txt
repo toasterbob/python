@@ -6,3 +6,45 @@ $ chmod a+x run.py
 Then the script can simply be executed as follows:
 
 ./run.py
+
+
+
+add user
+
+flask/bin/python
+>>> from app import db, models
+
+This brings our database and models into memory.
+Let's create a new user:
+
+>>> u = models.User(nickname='john', email='john@email.com')
+>>> db.session.add(u)
+>>> db.session.commit()
+
+Changes to a database are done in the context of a session. Multiple
+changes can be accumulated in a session and once all the changes have
+been registered you can issue a single db.session.commit(), which writes
+the changes atomically. If at any time while working on a session there
+is an error, a call to db.session.rollback() will revert the database to
+its state before the session was started. If neither commit nor rollback
+are issued then the system by default will roll back the session. Sessions
+guarantee that the database will never be left in an inconsistent state.
+
+Let's add another user:
+>>> u = models.User(nickname='susan', email='susan@email.com')
+>>> db.session.add(u)
+>>> db.session.commit()
+
+Now we can query what our users are:
+>>> users = models.User.query.all()
+>>> users
+[<User u'john'>, <User u'susan'>]
+>>> for u in users:
+...     print(u.id,u.nickname)
+...
+(1, u'john')
+(2, u'susan')
+theirs
+1 john
+2 susan
+>>>
