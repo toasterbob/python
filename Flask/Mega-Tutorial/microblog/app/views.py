@@ -13,6 +13,20 @@ def load_user(id):
 # are always unicode strings, so a conversion to an integer is necessary
 # before we can send the id to Flask-SQLAlchemy.
 
+@app.before_request
+def before_request():
+    g.user = current_user
+
+# you will remember that in the login view function we check g.user to
+# determine if a user is already logged in. To implement this we will
+# use the before_request event from Flask. Any functions that are decorated
+# with before_request will run before the view function each time a request
+# is received. So this is the right place to setup our g.user variable (file app/views.py):
+
+# The current_user global is set by Flask-Login, so we just put a copy
+# in the g object to have better access to it. With this, all requests
+# will have access to the logged in user, even inside templates.
+
 
 
 @app.route('/')
