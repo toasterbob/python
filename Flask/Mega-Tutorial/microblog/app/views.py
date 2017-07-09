@@ -1,6 +1,8 @@
-from flask import render_template, flash, redirect
-from app import app
+from flask import render_template, flash, redirect, session, url_for, request, g
+from flask_login import login_user, logout_user, current_user, login_required
+from app import app, db, lm, oid
 from .forms import LoginForm
+from .models import User
 
 @lm.user_loader
 def load_user(id):
@@ -40,12 +42,30 @@ def index():
 # route decorator. This tells Flask that this view function accepts GET
 # and POST requests. Without this the view will only accept GET requests.
 @app.route('/login', methods=['GET', 'POST'])
+@oid.loginhandler
+# We have added a new decorator to our view function. The oid.loginhandler
+# tells Flask-OpenID that this is our login view function.
 def login():
+    if g.user is not None and g.user.is_authenticated:
+        return redirect(url_for('index'))
+    # we check if g.user is set to an authenticated user, and in that
+    # case we redirect to the index page. The idea here is that if there
+    # is a logged in user already we will not do a second login on top.
+    # The g global is setup by Flask as a place to store and share data
+    # during the life of a request. As I'm sure you guessed by now, we
+    # will be storing the logged in user here.
+    # The url_for function that we used in the redirect call is defined
+    # by Flask as a clean way to obtain the URL for a given view function.
+    # If you want to redirect to the index page you may very well use
+    # redirect('/index'), but there are very good reasons to let Flask
+    # build URLs for you.
     form = LoginForm()
     if form.validate_on_submit():
-        flash('Login requested for OpenID="%s", remember_me=%s' %
-              (form.openid.data, str(form.remember_me.data)))
-        return redirect('/index')
+        # flash('Login requested for OpenID="%s", remember_me=%s' %
+        #       (form.openid.data, str(form.remember_me.data)))
+        # return redirect('/index')
+        session['remember_me'] = form.remember_me.data
+        return oid.try_login(form.openid.data, ask_for=['nickname', 'email'])
     return render_template('login.html',
                            title='Sign In',
                            form=form,
