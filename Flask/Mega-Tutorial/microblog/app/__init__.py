@@ -10,6 +10,7 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 lm = LoginManager()
 lm.init_app(app)
+lm.login_view = 'login'
 oid = OpenID(app, os.path.join(basedir, 'tmp'))
 # The Flask-OpenID extension requires a path to a temp folder where files
 # can be stored. For this we provide the location of our tmp folder.
