@@ -7,7 +7,14 @@
     {% endif %}
   </head>
   <body>
-    <div>Microblog: <a href="/index">Home</a></div>
+    <div>Microblog:
+      <a href="/index">Home</a></div>
+      {% if g.user.is_authenticated %}
+      | <a href="{{ url_for('logout') }}">Logout</a>
+      {% endif %}
+      <!-- We just needed to check if we have a valid user set in g.user
+      and if we do we just add the logout link. We have also used the
+      opportunity to use url_for in our template. -->
     <hr>
     {% with messages = get_flashed_messages() %}
       {% if messages %}
