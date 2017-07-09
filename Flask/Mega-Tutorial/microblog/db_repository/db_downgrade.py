@@ -11,4 +11,4 @@ print('Current database version: ' + str(v))
 # ./db_downgrade.py
 
 # This script will downgrade the database one revision. You can run it
-# multiple times to downgrade several revisions.
+# multiple times to downgrade several revisions. 
