@@ -48,3 +48,56 @@ theirs
 1 john
 2 susan
 >>>
+
+Here is another way to do queries. If we know the id of a user we can
+find the data for that user as follows:
+
+>>> u = models.User.query.get(1)
+>>> u
+<User u'john'>
+
+Now let's add a blog post:
+>>> import datetime
+>>> u = models.User.query.get(1)
+>>> p = models.Post(body='my first post!', timestamp=datetime.datetime.utcnow(), author=u)
+>>> db.session.add(p)
+>>> db.session.commit()
+
+Here we set our timestamp in UTC time zone. All timestamps stored in our
+database will be in UTC. We can have users from all over the world
+writing posts and we need to use uniform time units.
+
+You may have noticed that we have not set the user_id field of the Post
+class. Instead, we are storing a User object inside the author field.
+The author field is a virtual field that was added by Flask-SQLAlchemy
+to help with relationships, we have defined the name of this field in the
+backref argument to db.relationship in our model. With this information
+the ORM layer will know how to complete the user_id for us.
+
+To complete this session, let's look at a few more database queries that we can do:
+
+# get all posts from a user
+>>> u = models.User.query.get(1)
+>>> u
+<User u'john'>
+>>> posts = u.posts.all()
+>>> posts
+[<Post u'my first post!'>]
+
+# obtain author of each post
+>>> for p in posts:
+...     print(p.id,p.author.nickname,p.body)
+...
+1 john my first post!
+
+# a user that has no posts
+>>> u = models.User.query.get(2)
+>>> u
+<User u'susan'>
+>>> u.posts.all()
+[]
+
+# get all users in reverse alphabetical order
+>>> models.User.query.order_by('nickname desc').all()
+[<User u'susan'>, <User u'john'>]
+>>>
