@@ -53,3 +53,4 @@ for num in list:
 [["hello"] for i in range(0, 3)] # [['hello'], ['hello'], ['hello']]
 
 #11
+[[i for i in range(0,10)] for i in range(0, 10)]
