@@ -183,4 +183,4 @@ def user(nickname):
 # Once we have our user, we just send it in the render_template call,
 # along with some fake posts. Note that in the user profile page we will
 # be displaying only posts by this user, so our fake posts have the author
-# field correctly set.
+# field correctly set. 
