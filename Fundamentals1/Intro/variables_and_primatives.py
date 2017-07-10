@@ -161,7 +161,7 @@ string.title().istitle() # True
 # partition
 string.partition('i') # ('th', 'i', 's Is nIce') #tuple
 "awesome".partition('e') # ('aw', 'e', 'some')
-#similar to split but not as nice
+#similar to split but not as nice - Python also has split 
 
 
 
