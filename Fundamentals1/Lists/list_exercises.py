@@ -29,3 +29,6 @@ for num in list:
 [name[0] for name in ["Elie", "Tim", "Matt"]]
 
 #4
+[num for num in [1,2,3,4,5,6] if num % 2 == 0]
+
+#5
