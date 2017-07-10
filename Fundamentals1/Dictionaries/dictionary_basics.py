@@ -66,5 +66,23 @@ d.get('b') # 2
 d['no_key'] # KeyError
 d.get('no_key') # None
 
+# items - Returns a list of tuples with each key-value pair
+d = dict(a=1,b=2,c=3)
+d.items() # dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+# keys - Returns a dict_keys object containing all of the keys in an object.
+d = dict(a=1,b=2,c=3)
+d.keys() # dict_keys(['a', 'b', 'c'])
+
+e = d.items()
+for item in e:
+    print(item)
+
+
+
+
+
+
+
 
 #
