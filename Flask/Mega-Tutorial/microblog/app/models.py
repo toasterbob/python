@@ -1,4 +1,5 @@
 from app import db
+from hashlib import md5
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -35,6 +36,9 @@ class User(db.Model):
     # database layer for this. Note that due to the differences in unicode
     # handling between Python 2 and 3 we have to provide two alternative
     # versions of this method.
+
+    def avatar(self, size):
+        return 'http://www.gravatar.com/avatar/%s?d=mm&s=%d' % (md5(self.email.encode('utf-8')).hexdigest(), size)
 
     def __repr__(self):
         return '<User %r>' % (self.nickname)
