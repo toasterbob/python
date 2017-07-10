@@ -35,8 +35,23 @@ another_dictionary['another_key'] = 'another value'
 another_dictionary # {'another_key': 'another value', 'key': 'new value'}
 
 
+# common methods on dictionaries (in alphabetical order)
 
+# clear - Clears all the keys and values in a dictionary
+d = dict(a=1,b=2,c=3)
+d # {'a': 1, 'b': 2, 'c': 3}
+d.clear()
+d # {}
 
+# copy - Makes a copy of a dictionary
+d = dict(a=1,b=2,c=3)
+c = d.copy()
+c # {'a': 1, 'b': 2, 'c': 3}
+c is d # False - this really is a copy, not the original dictionary
+
+c["d"] = 4
+c # {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+d # {'a': 1, 'b': 2, 'c': 3}
 
 
 
