@@ -10,8 +10,10 @@
     <div>Microblog:
       <a href="/index">Home</a>
       {% if g.user.is_authenticated %}
-      | <a href="{{ url_for('logout') }}">Logout</a></div>
+      | <a href="{{ url_for('user', nickname=g.user.nickname) }}">Your Profile</a>
+      | <a href="{{ url_for('logout') }}">Logout</a>
       {% endif %}
+    </div>
       <!-- We just needed to check if we have a valid user set in g.user
       and if we do we just add the logout link. We have also used the
       opportunity to use url_for in our template. -->
