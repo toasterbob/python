@@ -32,3 +32,9 @@ for num in list:
 [num for num in [1,2,3,4,5,6] if num % 2 == 0]
 
 #5
+[num for num in [1,2,3,4] if num in [3,4,5,6]]
+
+#6
+[name.lower()[::-1] for name in ["Elie", "Tim", "Matt"]]
+
+#7
