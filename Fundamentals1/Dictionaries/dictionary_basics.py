@@ -53,10 +53,18 @@ c["d"] = 4
 c # {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 d # {'a': 1, 'b': 2, 'c': 3}
 
+# fromkeys - Creates key-value pairs from comma separated values
+{}.fromkeys("a","b") # {'a': 'b'}
+{}.fromkeys("a",[1,2,3,4,5]) # {'a': [1, 2, 3, 4, 5]}
 
-
-
-
+# get - Retrieves a key in an object and return None instead of a KeyError if the key does not exist
+d = dict(a=1,b=2,c=3)
+d['a'] # 1
+d.get('a') # 1
+d['b'] # 2
+d.get('b') # 2
+d['no_key'] # KeyError
+d.get('no_key') # None
 
 
 #
