@@ -80,7 +80,12 @@ for item in e:
 
 
 
-
+# pop - Takes a single argument corresponding to a key and removes that
+# key-value pair from the dictionary.
+# Returns the value corresponding to the key that was removed.
+# Unlike pop on lists, you must supply an argument to the dictionary pop
+# method or you'll get an error.
+# You'll also get an error if you try to pop a key that doesn't exist in the dictionary.
 
 
 
