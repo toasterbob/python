@@ -3,6 +3,7 @@ from flask_login import login_user, logout_user, current_user, login_required
 from app import app, db, lm, oid
 from .forms import LoginForm
 from .models import User
+from datetime import datetime
 
 @lm.user_loader
 def load_user(id):
@@ -16,6 +17,10 @@ def load_user(id):
 @app.before_request
 def before_request():
     g.user = current_user
+    if g.user.is_authenticated:
+        g.user.last_seen = datetime.utcnow()
+        db.session.add(g.user)
+        db.session.commit()
 
 # you will remember that in the login view function we check g.user to
 # determine if a user is already logged in. To implement this we will
@@ -183,4 +188,4 @@ def user(nickname):
 # Once we have our user, we just send it in the render_template call,
 # along with some fake posts. Note that in the user profile page we will
 # be displaying only posts by this user, so our fake posts have the author
-# field correctly set. 
+# field correctly set.
