@@ -45,3 +45,11 @@ for num in list:
 
 #9
 [char for char in "amazing" if char not in ["a", "e", "i", "o", "u"]]
+
+#10
+[[0, 1, 2] * 3] # [[0, 1, 2, 0, 1, 2, 0, 1, 2]]
+
+[[i for i in range(0,3)] for i in range(0, 3)] #[[0, 1, 2], [0, 1, 2], [0, 1, 2]]
+[["hello"] for i in range(0, 3)] # [['hello'], ['hello'], ['hello']]
+
+#11
