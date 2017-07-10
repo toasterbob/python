@@ -38,3 +38,10 @@ for num in list:
 [name.lower()[::-1] for name in ["Elie", "Tim", "Matt"]]
 
 #7
+[letter for letter in "first" if letter in "third"]
+
+#8
+[num for num in range(1, 101) if num % 12 == 0]
+
+#9
+[char for char in "amazing" if char not in ["a", "e", "i", "o", "u"]]
