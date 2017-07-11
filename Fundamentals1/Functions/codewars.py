@@ -2,8 +2,6 @@
 import math
 
 def new_avg(arr, newavg):
-    if len(arr) == 0 or arr[-1] <= 0:
-        raise ValueError('Last value is not positive')
     target = (len(arr) + 1) * newavg
     donation = target - sum(arr)
     if donation <= 0:
@@ -15,7 +13,7 @@ def new_avg(arr, newavg):
 def new_avg(arr, newavg)
   raise "ERROR" if arr[-1] <= 0 || arr.empty?
   target = (arr.length + 1) * newavg
-  donation = target - arr.reduce(:+)
+  donation = target - arr.reduce(0,:+)
   raise "ERROR" if donation <= 0
   donation.ceil
 end
