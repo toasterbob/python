@@ -1,3 +1,8 @@
+# Reversed strings
+def solution(str):
+    return str[::-1]
+
+
 # Looking for a benefactor
 import math
 
