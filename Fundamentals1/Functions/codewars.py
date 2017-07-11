@@ -44,3 +44,24 @@ def sequence_sum(begin_number, end_number, step)
   arr = (begin_number..end_number).step(step).to_a
   arr.reduce(0, :+)
 end
+
+
+# max diff
+def max_diff(arr):
+    if len(arr) <= 1:
+        return 0
+    arr.sort()
+    return arr[-1] - arr[0]
+
+def max_diff(arr):
+    return max(arr) - min(arr) if arr else 0
+# for 1 value array it would equal zero
+
+# Ruby
+def max_diff(arr)
+    if arr.empty?
+        0
+    else
+        arr[-1] - arr[0]
+    end
+end
