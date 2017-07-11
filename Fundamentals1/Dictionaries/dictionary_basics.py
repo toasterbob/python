@@ -87,7 +87,35 @@ for item in e:
 # method or you'll get an error.
 # You'll also get an error if you try to pop a key that doesn't exist in the dictionary.
 
+d = dict(a=1,b=2,c=3)
+d.pop() # TypeError: pop expected at least 1 arguments, got 0
+d.pop('a') # 1
+
+d # {'c': 3, 'b': 2}
+d.pop('e') # KeyError
 
 
+# popitem - Removes a random key in a dictionary
+d = dict(a=1,b=2,c=3,d=4,e=5)
+d.popitem() # ('d', 4)
+d.popitem('a') # TypeError: popitem() takes no arguments (1 given)
+
+
+# update - Update keys and values in a dictionary with another set of key value pairs.
+
+first = dict(a=1,b=2,c=3,d=4,e=5)
+second = {}
+
+second.update(first)
+second # {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# let's overwrite an existng key
+second['a'] = "AMAZING"
+second # {'a': 'AMAZING', 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# if we update again
+second.update(first) # {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+# the update overrides our values
+second # {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
 #
