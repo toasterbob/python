@@ -126,6 +126,15 @@ set2 = {2,3,4}
 set1.difference(set2) # {1}
 set2.difference(set1) # {4}
 
+# intersection - Returns a new set containing all the elements that are in both sets
+
+set1 = {1,2,3}
+set2 = {2,3,4}
+set1.intersection(set2) # {2,3}
+
+# symmetric_difference - Returns a new set containing all the elements
+# that are in exactly one of the sets
+
 
 
 
