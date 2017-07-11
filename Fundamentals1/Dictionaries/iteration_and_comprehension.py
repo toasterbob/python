@@ -110,6 +110,23 @@ s = set([1,2,3])
 s.clear()
 s # set()
 
+# copy - Creates a copy of the set
+s = set([1,2,3])
+another_s = s.copy()
+another_s # {1, 2, 3}
+another_s is s # False
+another_s.add(4)
+another_s # {1, 2, 3, 4}
+s # {1, 2, 3}
+
+# difference - Returns a new set containing all the elements that are in
+# the first set but not in the set passed to difference
+set1 = {1,2,3}
+set2 = {2,3,4}
+set1.difference(set2) # {1}
+set2.difference(set1) # {4}
+
+
 
 
 #
