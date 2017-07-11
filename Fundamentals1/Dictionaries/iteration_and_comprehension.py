@@ -73,4 +73,32 @@ t.index(3) # 2 - only the first matching index is returned
 
 
 
+# Sets
+# Sets do not have duplicate values, and elements in sets aren't ordered.
+# You cannot access items in a set by index. Sets can be useful if you need
+# to keep track of a collection of elements, but don't care about ordering.
+
+# To test whether a value is a member of a set, use the in operator
+
+# Sets cannot have duplictes
+s = set({1,2,3,4,5,5,5}) # {1, 2, 3, 4, 5}# Creating a new set
+s = set({1,4,5})
+
+# Creating a new set
+s = set({1,4,5})
+
+# Creates a set with the same values as above
+s = {4,1,5}
+
+
+4 in s # True
+
+8 in s # False
+
+
+# Set methods
+
+
+
+
 #
