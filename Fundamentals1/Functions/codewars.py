@@ -24,3 +24,23 @@ def new_avg(arr, newavg)
 end
 
 p new_avg([14, 30, 5, 7, 9, 11, 15], 30)
+
+
+# Sum of a sequence
+def sequence_sum(begin_number, end_number, step):
+    return sum(range(begin_number, end_number + 1, step))
+
+# Ruby
+def sequence_sum(begin_number, end_number, step)
+  sum = 0
+  while begin_number <= end_number
+    sum += begin_number
+    begin_number += step
+  end
+  sum
+end
+# Ruby 2
+def sequence_sum(begin_number, end_number, step)
+  arr = (begin_number..end_number).step(step).to_a
+  arr.reduce(0, :+)
+end
