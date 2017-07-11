@@ -98,6 +98,17 @@ s = {4,1,5}
 
 # Set methods
 
+# add - Adds an element to a set. If the element is already in the set, the set doesn't change
+s = set([1,2,3])
+s.add(4)
+s # {1, 2, 3, 4}
+s.add(4)
+s # {1, 2, 3, 4}
+
+# clear - Removes all the contents of the set
+s = set([1,2,3])
+s.clear()
+s # set()
 
 
 
