@@ -27,3 +27,4 @@ dict(zip(a,b))
 string = "awesome sauce"
 
 {vowel: string.count(vowel) for vowel in "awesome sauce" if vowel in ["a","e","i","o","u"]}
+ 
