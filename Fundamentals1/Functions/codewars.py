@@ -65,3 +65,23 @@ def max_diff(arr)
         arr[-1] - arr[0]
     end
 end
+
+# count smiley faces
+def count_smileys(arr):
+    count = 0
+    for el in arr:
+        if el[0] == ":" or el[0] == ";":
+            if el[1] == ")" or el[1] == "D":
+                count += 1
+            elif el[1] == "-" or el[1] == "~":
+                if el[2] == ")" or el[2] == "D":
+                    count += 1
+    return count
+
+import re
+def count_smileys(arr):
+    return sum(1 for _ in re.finditer(r"[:;][-~]?[)D]", " ".join(arr)))
+
+from re import findall
+def count_smileys(arr):
+    return len(list(findall(r"[:;][-~]?[)D]", " ".join(arr))))
