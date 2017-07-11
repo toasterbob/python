@@ -46,9 +46,29 @@ num_list = [1,2,3,4]
 
 
 
+# Tuples
 
+# Tuples are another collection in Python, but they are immutable.
+# This means that you can't reassign values in tuples like you can with lists.
+# Because of this immutability, however, operations on tuples are faster than lists.
+# If you're defining a collection of values that won't change, use a tuple instead of a list.
 
+x = (1,2,3)
+3 in x # True
+x[0] = "change me!" # TypeError: 'tuple' object does not support item assignment
 
+#Tuple methods
+
+# count - Returns the number of times a value appears in a tuple
+x = (1,2,3,3,3)
+x.count(1) # 1
+x.count(3) # 3
+
+# index - Returns the index at which a value is found in a tuple.
+t = (1,2,3,3,3)
+t.index(1) # 0
+t.index(5) # ValueError: tuple.index(x): x not in tuple
+t.index(3) # 2 - only the first matching index is returned
 
 
 
