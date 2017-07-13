@@ -136,3 +136,20 @@ def race(v1, v2, g):
     return [h, m, s]
 
 race(720, 850, 70) # [0, 32, 18]
+
+
+#ruby
+def race(v1, v2, g)
+    return nil if v1 >= v2
+    n = g.to_f/(v2 - v1)
+    h = n.floor
+    min = (n - h) * 60
+    m = min.floor
+    if min - m > 0.999
+      m += 1
+      s = 0
+    else
+      s = ((min - m) * 60).floor
+    end
+    [h, m, s]
+end
