@@ -121,8 +121,6 @@ end
 #race
 
 import math
-
-import math
 def race(v1, v2, g):
     if v1 >= v2:
         return None
@@ -130,19 +128,11 @@ def race(v1, v2, g):
     h = math.floor(n)
     mins = (n - h) * 60
     m = math.floor(mins)
-    s = math.floor((mins - m) * 60)
-    return [h, m, s]
-
-race(720, 850, 70) # [0, 32, 18]
-
-def race(v1, v2, g):
-    if v1 >= v2:
-        return None
-    n = g/(v2 - v1)
-    h = math.floor(n)
-    mins = (n - h) * 60
-    m = round(mins)
-    s = round((mins - m) * 60)
+    if mins - m > .999:
+        m += 1
+        s = 0
+    else:
+        s = math.floor((mins - m) * 60)
     return [h, m, s]
 
 race(720, 850, 70) # [0, 32, 18]
