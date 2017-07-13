@@ -99,3 +99,20 @@ def count_smileys(arr)
   end
   count
 end
+
+
+# sentence count
+def sentence_count(paragraph):
+    e = paragraph.count("!")
+    q = paragraph.count("?")
+    p = paragraph.count(".")
+    return e + q + p
+
+# Ruby
+def sentence_count(paragraph)
+  count = 0
+  paragraph.split(" ").each do |word|
+    count += 1 if word[-1] == "." || word[-1] == "?" || word[-1] == "!"
+  end
+  count
+end
