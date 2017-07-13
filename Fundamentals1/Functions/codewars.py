@@ -153,3 +153,6 @@ def race(v1, v2, g)
     end
     [h, m, s]
 end
+
+
+# calculate string rotation
