@@ -156,3 +156,11 @@ end
 
 
 # calculate string rotation
+def shifted_diff(first, second):
+  for i in range(0, len(first)):
+    check = second[i:] + second[:i]
+    if first == check:
+      return i
+  return -1
+
+ 
