@@ -87,3 +87,15 @@ def count_smileys(arr):
     return len(list(findall(r"[:;][-~]?[)D]", " ".join(arr))))
 
 # ruby
+def count_smileys(arr)
+  count = 0
+  arr.each do |el|
+    if el[0] == ":" || el[0] == ";"
+      count += 1 if el[1] == ")" || el[1] == "D"
+      if el[1] == "-" || el[1] == "~"
+        count += 1 if el[2] == ")" || el[2] == "D"
+      end
+    end
+  end
+  count
+end
