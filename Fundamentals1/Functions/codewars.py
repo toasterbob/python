@@ -163,4 +163,14 @@ def shifted_diff(first, second):
       return i
   return -1
 
- 
+ #ruby
+ def shifted_diff(first, second)
+  i = 0
+  while i < first.length
+    return i if first == second
+    second = second.chars.rotate(1).join("")
+    i += 1
+  end
+  -1
+end
+shifted_diff("coffee", "eecoff")
