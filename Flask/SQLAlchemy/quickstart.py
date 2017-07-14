@@ -93,3 +93,33 @@ class Category(db.Model):
 
     def __repr__(self):
         return '<Category %r>' % self.name
+
+# First let’s create some objects:
+#
+# >>> py = Category('Python')
+# >>> p = Post('Hello Python!', 'Python is pretty cool', py)
+# >>> db.session.add(py)
+# >>> db.session.add(p)
+# Now because we declared posts as dynamic relationship in the backref it shows up as query:
+#
+# >>> py.posts
+# <sqlalchemy.orm.dynamic.AppenderBaseQuery object at 0x1027d37d0>
+
+# It behaves like a regular query object so we can ask it for all posts that are associated with our test “Python” category:
+#
+# >>> py.posts.all()
+# [<Post 'Hello Python!'>]
+
+
+# Road to Enlightenment
+# The only things you need to know compared to plain SQLAlchemy are:
+#
+# SQLAlchemy gives you access to the following things:
+# all the functions and classes from sqlalchemy and sqlalchemy.orm
+# a preconfigured scoped session called session
+# the metadata
+# the engine
+# a SQLAlchemy.create_all() and SQLAlchemy.drop_all() methods to create and drop tables according to the models.
+# a Model baseclass that is a configured declarative base.
+# The Model declarative base class behaves like a regular Python class but has a query attribute attached that can be used to query the model. (Model and BaseQuery)
+# You have to commit the session, but you don’t have to remove it at the end of the request, Flask-SQLAlchemy does that for you.
