@@ -28,3 +28,22 @@ pet_names(dog_name="Fido", cat_name="Mittens")
 # Default argument values
 def add(a=5,b=15):
     return a + b
+
+add(15,1) # 16
+add(4) # 19 - a is set to 4, b is set to 15
+add() # 20
+add(b=30) # 35 - a is set to 5 by default and b is 30 using keyword arguments
+
+
+
+# Variable number of function arguments
+# There are two ways we can do this. The first is by using *
+
+def foo(*args):
+    print(args)
+
+foo(1,2,3)
+foo(1,2)
+foo([1, 2, 3])
+# Inside of the function, the named parameter after the * corresponds to
+# a tuple of the arguments passed in.
