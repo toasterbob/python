@@ -47,3 +47,16 @@ foo(1,2)
 foo([1, 2, 3])
 # Inside of the function, the named parameter after the * corresponds to
 # a tuple of the arguments passed in.
+
+def add(*nums):
+    return sum(nums)
+
+add(1,2,3,4) # 10
+
+# We can also use the * operator when invoking a function. In that case,
+# the * will take an iterable like a list and split it up into separate parameters.
+
+def add_three_nums(n1, n2, n3):
+    return n1 + n2 + n3
+
+add_three_nums(*[5,6,4]) # same as add_three_nums(5,6,4)
