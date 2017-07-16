@@ -119,5 +119,19 @@ help(say_hello) # gives us even more detail with the docstring!
 # an enhanced comment. Docstrings are also very useful when writing tests,
 # as you can see what the docstring is when running the test.
 
+# Default argument types for Python
+
+# Unlike languages like Java and C++, Python is a loosely typed language.
+# This means that we do not need to define the data type of a variable when initializing it.
+
+# This gives us a bit more flexibility around our code, but sometimes we
+# want to clearly indicate that a certain data type is what should be
+# passed as a parameter, or that a function returns a specific value. We
+# can do that in Python!
+
+def add(a: int, b: int) -> int:
+    """This function returns the sum of two numbers"""
+    return a+b
+
 
 #
