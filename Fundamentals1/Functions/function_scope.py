@@ -97,4 +97,27 @@ y = outerCount()
 y() # 1
 
 x() # 2
+
+
+
+# Documenting our functions
+
+# Something that Python offers us is the ability to add what is called a docstring
+
+def say_hello():
+    # we are using three quotes so that this can be a multi-line string if necessary
+    """This function returns the string hello when called"""
+    return "hello"
+
+say_hello() # "hello"
+
+say_hello.__doc__ # "This function returns the string hello when called"
+
+help(say_hello) # gives us even more detail with the docstring!
+
+# Docstrings are essential when writing methods and can be thought of like
+# an enhanced comment. Docstrings are also very useful when writing tests,
+# as you can see what the docstring is when running the test.
+
+
 #
