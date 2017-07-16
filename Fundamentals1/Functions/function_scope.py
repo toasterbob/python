@@ -29,8 +29,13 @@ def increment_id():
 
 increment_id() # UnboundLocalError: local variable 'id' referenced before assignment
 
+# In Python you need to explicitly state that a variable should be global, using the global keyword.
+id = 0
+def increment_id():
+    global id
+    id += 1
 
-
+increment_id() # The global id is now 1
 
 
 
