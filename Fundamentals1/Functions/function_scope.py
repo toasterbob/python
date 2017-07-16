@@ -51,4 +51,38 @@ print_locals() #{'name': 'Elie', 'x': 2}
 
 print(globals())
 print(locals())
+
+
+# Python Nested Functions (sort of like closures)
+
+# In Python we do have support for closures, a feature where an inner
+# function has access to variables in an outer function's scope, even
+# after the outer function has finished executing.
+
+def outer(a):
+    def inner(b):
+        return a + b
+    return inner
+
+outer(3)(4) #7
+x = outer(2)
+x(10) #12
+
+
+# However, closures in Python are "weak" and have some limitations. For example,
+# if you want to change the value of a variable from an outer scope,
+# you'll run in to problems:
+
+def counter():
+    x = 0;
+    def increment():
+        x += 1
+        print(x)
+    return increment
+
+counter()() # UnboundLocalError: local variable 'x' referenced before assignment
+
+
+
+
 #
