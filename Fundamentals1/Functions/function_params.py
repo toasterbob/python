@@ -4,7 +4,7 @@ def pet_names(cat_name, dog_name):
 
 print(pet_names("bob", "cat"))
 
-
+#keyword arguments
 def pet_names(cat_name, dog_name):
     return "I have a cat named {} and a dog named {}.".format(cat_name, dog_name)
 
@@ -20,3 +20,6 @@ pet_names(cat_name="Mittens", dog_name="Fido")
 # keyword arguments - order doesn't matter!
 pet_names(dog_name="Fido", cat_name="Mittens")
 # "I have a cat named Mittens and a dog named Fido."
+
+# When you call a function by passing in a keyword=value pair, you're said to be using keyword arguments.
+# This can be especially useful if you have a function that accepts many parameters.
