@@ -47,7 +47,7 @@ def print_locals():
     name = "Elie"
     print(locals())
 
-print_locals()
+print_locals() #{'name': 'Elie', 'x': 2}
 
 print(globals())
 print(locals())
