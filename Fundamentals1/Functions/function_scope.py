@@ -38,5 +38,17 @@ def increment_id():
 increment_id() # The global id is now 1
 
 
+# Listing locals and globals
+# In Python we can display all of the local variables and global variables
+# using the locals and globals functions
 
+def print_locals():
+    x = 2
+    name = "Elie"
+    print(locals())
+
+print_locals()
+
+print(globals())
+print(locals())
 #
