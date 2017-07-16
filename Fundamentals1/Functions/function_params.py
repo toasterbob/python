@@ -60,3 +60,11 @@ def add_three_nums(n1, n2, n3):
     return n1 + n2 + n3
 
 add_three_nums(*[5,6,4]) # same as add_three_nums(5,6,4)
+
+
+
+# Variable number of keyword arguments
+def print_kwargs(a,b,**kwargs):
+    print(a,b,kwargs)
+
+print_kwargs(1,2,awesome='sauce', test='yup') # 1 2 {'test': 'yup', 'awesome': 'sauce'}
