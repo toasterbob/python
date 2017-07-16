@@ -23,6 +23,13 @@ x # NameError
 # need to use the global keyword. Using global variables in general
 # is not best practice
 
+id = 0
+def increment_id():
+    id += 1
+
+increment_id() # UnboundLocalError: local variable 'id' referenced before assignment
+
+
 
 
 
