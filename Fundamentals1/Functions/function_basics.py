@@ -17,3 +17,15 @@ def return_none():
 var = return_none();
 print(var) # None
 print(var == None) # true
+
+def print_five_plus_five():
+    print(5 + 5)
+
+def add_five_plus_five():
+    return 5 + 5
+
+ten = add_five_plus_five()
+maybe_ten = print_five_plus_five() # this line should print 10 to the console
+
+ten # 10
+maybe_ten # None
