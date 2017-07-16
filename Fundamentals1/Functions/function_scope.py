@@ -83,6 +83,18 @@ def counter():
 counter()() # UnboundLocalError: local variable 'x' referenced before assignment
 
 
+def outerCount():
+    def innerCount():
+        innerCount.x += 1
+        print(innerCount.x)
+    innerCount.x = 0
+    return innerCount
 
+x = outerCount()
+x() # 1
 
+y = outerCount()
+y() # 1
+
+x() # 2
 #
