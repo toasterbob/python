@@ -29,25 +29,4 @@ string = "awesome sauce"
 {vowel: string.count(vowel) for vowel in "awesome sauce" if vowel in ["a","e","i","o","u"]}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 { chr: "awesome sauce".count(chr) for chr in ["a", "e", "i", "o", "u"]}
