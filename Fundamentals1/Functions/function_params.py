@@ -23,3 +23,8 @@ pet_names(dog_name="Fido", cat_name="Mittens")
 
 # When you call a function by passing in a keyword=value pair, you're said to be using keyword arguments.
 # This can be especially useful if you have a function that accepts many parameters.
+
+
+# Default argument values
+def add(a=5,b=15):
+    return a + b
