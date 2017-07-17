@@ -181,7 +181,6 @@ def mode(nums):
 mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
 
 
-
 #theirs
 
 def mode(collection):
@@ -196,4 +195,17 @@ def mode(collection):
     correct_index = list(count.values()).index(max_value)
     # finally, return the correct key for the correct index (we have to convert cou)
     return list(count.keys())[correct_index]
+
+
+def capitalize(string):
+    result = ""
+    for idx, char in string:
+        if idx == 0:
+            result += char.upper()
+        else:
+            result += char
+    return result
+
+capitalize("tim") # "Tim"
+capitalize("matt") # "Matt"
 #
