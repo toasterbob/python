@@ -69,7 +69,11 @@ def single_letter_count(word, letter):
 single_letter_count('amazing','A') # 2
 
 
+def multiple_letter_count(word):
+    return { char: word.count(char) for char in word }
 
+multiple_letter_count("hello") # {h:1, e: 1, l: 2, o:1}
+multiple_letter_count("person") # {p:1, e: 1, r: 1, s:1, o:1, n:1}
 
 
 
