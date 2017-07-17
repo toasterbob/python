@@ -121,5 +121,12 @@ is_palindrome('robert') # False
 is_palindrome('a man a plan a canal Panama') # True
 
 
+def frequency(list, item):
+    return list.count(item)
+
+frequency([1,2,3,4,4,4], 4) # 3
+frequency([True, False, True, True], False) # 1
+
+
 
 #
