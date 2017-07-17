@@ -250,5 +250,34 @@ partition([1,2,3,4], is_even) # [[2,4],[1,3]]
 
 
 def intersection(arr1, arr2):
-    return 
+    return [el for el in arr1 if el in arr2]
+
+intersection([1,2,3], [2,3,4]) # [2,3]
+
+
+
+
+def once(func):
+    def inner(*args):
+        if inner.ran == False:
+            inner.ran = True
+            return func(*args)
+        else:
+            return None
+    inner.ran = False
+    return inner
+
+def add(a,b):
+    return a+b
+
+one_addition = once(add)
+
+one_addition(2,2) # 4
+one_addition(2,2) # undefined
+one_addition(12,200) # undefined
+
+
+
+
+
 #
