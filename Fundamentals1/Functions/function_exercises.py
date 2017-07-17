@@ -63,6 +63,16 @@ def number_compare(a,b):
         return "Second is greater"
     return "Numbers are equal"
 
+def single_letter_count(word, letter):
+    return word.lower().count(letter.lower())
+
+single_letter_count('amazing','A') # 2
+
+
+
+
+
+
 
 
 
