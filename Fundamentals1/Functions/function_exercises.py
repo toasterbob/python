@@ -249,4 +249,6 @@ def partition(arr,func):
 partition([1,2,3,4], is_even) # [[2,4],[1,3]]
 
 
+def intersection(arr1, arr2):
+    return 
 #
