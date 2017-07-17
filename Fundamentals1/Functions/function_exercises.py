@@ -290,5 +290,21 @@ one_addition(2,2) # 4
 one_addition(2,2) # undefined
 one_addition(12,200) # undefined
 
+# Decorator
 
+def once(fn):
+    fn.is_called = False
+    def inner(*args):
+        if not(fn.is_called):
+            fn.is_called = True
+            return fn(*args)
+    return inner
+
+@once
+def add(a,b):
+    return a+b
+
+add(2,2) # 4
+add(2,20) # None
+add(12,20) # None
 #
