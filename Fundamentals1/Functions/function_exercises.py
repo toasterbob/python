@@ -226,4 +226,25 @@ def compact(l):
 
 compact([0,1,2,"",[], False, {}, None, "All done"]) # [1,2, "All done"]
 
+def is_even(num):
+    return num % 2 == 0
+
+def partition(arr, func):
+    yes = []
+    no = []
+    for el in arr:
+        if func(el):
+            yes.append(el)
+        else:
+            no.append(el)
+    return [yes, no]
+
+partition([1,2,3,4], is_even) # [[2,4],[1,3]]
+
+# One liner
+def partition(arr,func):
+    return [[el for el in arr if func(el)], [el for el in arr if not func(el)]]
+    # but this would be double the time complexity O(2n)
+
+partition([1,2,3,4], is_even) # [[2,4],[1,3]]
 #
