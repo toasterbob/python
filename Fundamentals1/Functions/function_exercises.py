@@ -76,8 +76,21 @@ multiple_letter_count("hello") # {h:1, e: 1, l: 2, o:1}
 multiple_letter_count("person") # {p:1, e: 1, r: 1, s:1, o:1, n:1}
 
 
+def list_manipulation(list, command, location, value = None):
+    if command == "remove":
+        if location == "end":
+            return list.pop()
+        elif location == "beginning":
+            return list.pop(0)
+    elif command == "add":
+        if location == "end":
+            return list.append(value)
+        elif location == "beginning":
+            return list.insert(0, value)
 
-
-
+list_manipulation([1,2,3], "remove", "end") # 3
+list_manipulation([1,2,3], "remove", "beginning") # 1
+list_manipulation([1,2,3], "add", "beginning", 20) # [20,1,2,3]
+list_manipulation([1,2,3], "add", "end", 30) # [1,2,3,30]
 
 #
