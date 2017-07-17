@@ -111,7 +111,7 @@ def list_manipulation(collection, command, location, value=None):
         return collection
 
 def is_palindrome(word):
-    word = word.replace(" ", "") # remove whitespace 
+    word = word.replace(" ", "") # remove whitespace
     return word.lower() == word.lower()[::-1]
 
 is_palindrome('testing') # False
@@ -119,5 +119,7 @@ is_palindrome('tacocat') # True
 is_palindrome('hannah') # True
 is_palindrome('robert') # False
 is_palindrome('a man a plan a canal Panama') # True
+
+
 
 #
