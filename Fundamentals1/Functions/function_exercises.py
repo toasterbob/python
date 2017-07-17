@@ -128,5 +128,14 @@ frequency([1,2,3,4,4,4], 4) # 3
 frequency([True, False, True, True], False) # 1
 
 
+def flip_case(string, case):
+    result = [letter.swapcase() if letter.lower() == case.lower() else letter for letter in string]
+    return "".join(result)
 
+flip_case("Hardy har har", "h") # "hardy Har Har"
+
+
+#theirs
+def flip_case(string, letter):
+    return "".join([char.swapcase() if char.lower() == letter.lower() else char for char in string])
 #
