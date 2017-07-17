@@ -83,10 +83,13 @@ def list_manipulation(list, command, location, value = None):
         elif location == "beginning":
             return list.pop(0)
     elif command == "add":
+        print('hi')
         if location == "end":
-            return list.append(value)
+            list.append(value)
+            return list
         elif location == "beginning":
-            return list.insert(0, value)
+            list.insert(0, value)
+            return list
 
 list_manipulation([1,2,3], "remove", "end") # 3
 list_manipulation([1,2,3], "remove", "beginning") # 1
