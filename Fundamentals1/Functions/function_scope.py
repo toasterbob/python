@@ -119,6 +119,8 @@ help(say_hello) # gives us even more detail with the docstring!
 # an enhanced comment. Docstrings are also very useful when writing tests,
 # as you can see what the docstring is when running the test.
 
+
+
 # Default argument types for Python
 
 # Unlike languages like Java and C++, Python is a loosely typed language.
@@ -133,5 +135,15 @@ def add(a: int, b: int) -> int:
     """This function returns the sum of two numbers"""
     return a+b
 
+# We are specifying that both a and b are ints and the return value from
+# the function is an int as well. We can also combine this with default
+# parameter values!
 
+def add(a: int = 5, b: int = 5) -> int:
+    """This function returns the sum of two numbers with default values of 5 for a and 5 for b"""
+    return a + b
+
+add() # 10
+add.__doc__
+help(add) 
 #
