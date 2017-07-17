@@ -110,5 +110,13 @@ def list_manipulation(collection, command, location, value=None):
         collection.append(value)
         return collection
 
+def is_palindrome(word):
+    return word == word.reverse()
+
+is_palindrome('testing') # False
+is_palindrome('tacocat') # True
+is_palindrome('hannah') # True
+is_palindrome('robert') # False
+
 
 #
