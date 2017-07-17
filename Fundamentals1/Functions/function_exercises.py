@@ -256,7 +256,6 @@ intersection([1,2,3], [2,3,4]) # [2,3]
 
 
 
-
 def once(func):
     def inner(*args):
         if inner.ran == False:
