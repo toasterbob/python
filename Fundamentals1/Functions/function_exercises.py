@@ -172,11 +172,11 @@ def mode(list):
 
 mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
 
-def mode(list):
-    dictionary = {num: list.count(num) for num in list}
+def mode(nums):
+    dictionary = {num: nums.count(num) for num in nums}
     max_value = max(dictionary.values())
-    val = list(dictionary.values())
-    return val
+    idx = list(dictionary.values()).index(max_value)
+    return list(dictionary.keys())[idx]
 
 mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
 
