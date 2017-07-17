@@ -257,13 +257,13 @@ intersection([1,2,3], [2,3,4]) # [2,3]
 
 
 def once(func):
+    inner.ran = False
     def inner(*args):
         if inner.ran == False:
             inner.ran = True
             return func(*args)
         else:
             return None
-    inner.ran = False
     return inner
 
 def add(a,b):
@@ -276,7 +276,19 @@ one_addition(2,2) # undefined
 one_addition(12,200) # undefined
 
 
+def once(fn):
+    fn.is_called = False
+    def inner(*args):
+        if not(fn.is_called):
+            fn.is_called = True
+            return fn(*args)
+    return inner
 
+one_addition = once(add)
+
+one_addition(2,2) # 4
+one_addition(2,2) # undefined
+one_addition(12,200) # undefined
 
 
 #
