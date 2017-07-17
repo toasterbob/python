@@ -209,5 +209,21 @@ def capitalize(string):
 capitalize("tim") # "Tim"
 capitalize("matt") # "Matt"
 
+def capitalize(string):
+    return string[:1].upper() + string[1:]
+
+capitalize("tim") # "Tim"
+capitalize("matt") # "Matt"
+
+def compact(list):
+    return [el for el in list if bool(el) == True]
+
+compact([0,1,2,"",[], False, {}, None, "All done"]) # [1,2, "All done"]
+
+#theirs
+def compact(l):
+    return [val for val in l if val]
+
+compact([0,1,2,"",[], False, {}, None, "All done"]) # [1,2, "All done"]
 
 #
