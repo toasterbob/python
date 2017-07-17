@@ -164,7 +164,7 @@ def mode(list):
     val = None
     dictionary = {num: list.count(num) for num in list}
     print(dictionary)
-    for k,v in dictionary.items(): 
+    for k,v in dictionary.items():
         if v > high:
             high = v
             val = k
@@ -172,6 +172,28 @@ def mode(list):
 
 mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
 
+def mode(list):
+    dictionary = {num: list.count(num) for num in list}
+    max_value = max(dictionary.values())
+    val = list(dictionary.values())
+    return val
+
+mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
 
 
+
+#theirs
+
+def mode(collection):
+    # you can import mode from statistics to cheat
+    # you can import Counter from collections to make this easier
+
+    # or we can just solve it :)
+    count = {val: collection.count(val) for val in collection}
+    # find the highest value (the most frequent number)
+    max_value = max(count.values())
+    # now we need to see at which index the highest value is at
+    correct_index = list(count.values()).index(max_value)
+    # finally, return the correct key for the correct index (we have to convert cou)
+    return list(count.keys())[correct_index]
 #
