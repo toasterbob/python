@@ -111,7 +111,7 @@ def list_manipulation(collection, command, location, value=None):
         return collection
 
 def is_palindrome(word):
-    return word == word[::-1] 
+    return word == word[::-1]
 
 is_palindrome('testing') # False
 is_palindrome('tacocat') # True
