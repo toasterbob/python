@@ -247,4 +247,6 @@ def partition(arr,func):
     # but this would be double the time complexity O(2n)
 
 partition([1,2,3,4], is_even) # [[2,4],[1,3]]
+
+
 #
