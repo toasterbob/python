@@ -22,6 +22,15 @@ print_day(4) # "Wednesday"
 print_day(41) # None
 
 
+#theirs
+def print_day(n):
+    try:
+        return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][n - 1]
+    except IndexError as e:
+        return None
+        
+print_day(4) # "Wednesday"
+print_day(41) # None
 
 
 #
