@@ -199,7 +199,7 @@ def mode(collection):
 
 def capitalize(string):
     result = ""
-    for idx, char in string:
+    for idx, char in enumerate(string):
         if idx == 0:
             result += char.upper()
         else:
@@ -208,4 +208,6 @@ def capitalize(string):
 
 capitalize("tim") # "Tim"
 capitalize("matt") # "Matt"
+
+
 #
