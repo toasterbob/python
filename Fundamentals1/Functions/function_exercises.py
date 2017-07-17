@@ -134,8 +134,34 @@ def flip_case(string, case):
 
 flip_case("Hardy har har", "h") # "hardy Har Har"
 
-
 #theirs
 def flip_case(string, letter):
     return "".join([char.swapcase() if char.lower() == letter.lower() else char for char in string])
+
+
+
+def multiply_even_numbers(list):
+    result = 1
+    for num in list:
+        if num % 2 == 0:
+            result *= num
+    return result
+
+multiply_even_numbers([2,3,4,5,6]) # 48
+
+#theirs
+def multiply_even_numbers(list):
+    # you can import reduce from the functools module if you would like
+    total = 1
+    for val in list:
+        if val % 2 == 0:
+            total = total * val
+    return total
+
+
+
+
+
+
+
 #
