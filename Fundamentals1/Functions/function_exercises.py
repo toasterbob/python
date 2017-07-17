@@ -43,9 +43,25 @@ last_element([1,2,3,4]) # 4
 last_element([]) # None
 
 
+def number_compare(a, b):
+    if a > b:
+        return "First is greater"
+    elif a < b:
+        return "Second is greater"
+    else:
+        return "Numbers are equal"
 
+number_compare(1,1) # "Numbers are equal"
+number_compare(1,2) # "Second is greater"
+number_compare(2,1) # "First is greater"
 
-
+# theirs has no else
+def number_compare(a,b):
+    if a > b:
+        return "First is greater"
+    elif b > a:
+        return "Second is greater"
+    return "Numbers are equal"
 
 
 
