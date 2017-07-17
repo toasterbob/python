@@ -159,8 +159,18 @@ def multiply_even_numbers(list):
     return total
 
 
+def mode(list):
+    high = 0
+    val = None
+    dictionary = {num: list.count(num) for num in list}
+    print(dictionary)
+    for k,v in dictionary.items(): 
+        if v > high:
+            high = v
+            val = k
+    return val
 
-
+mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
 
 
 
