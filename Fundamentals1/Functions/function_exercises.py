@@ -28,9 +28,26 @@ def print_day(n):
         return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][n - 1]
     except IndexError as e:
         return None
-        
+
 print_day(4) # "Wednesday"
 print_day(41) # None
+
+
+def last_element(arr):
+    try:
+        return arr[-1]
+    except IndexError as e:
+        return None
+
+last_element([1,2,3,4]) # 4
+last_element([]) # None
+
+
+
+
+
+
+
 
 
 #
